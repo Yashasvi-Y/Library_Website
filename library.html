@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Website</title>
+  <link rel="stylesheet" href="library.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Header Section -->
+   <div class="container">
+  <header>
+    <div class="logo"><img src="navLogo.png" alt="Library" height="5%" width="30%"></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Search</a>
+      <a href="#">My Library</a>
+      <a href="#">Library News</a>
+      <a href="#">New Arrivals</a>
+    </nav>
+    <div class="user-icon"><img src="profilelogo.png" alt="profile" width="60%"></div>
+  </header>
+
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <img src="background.png" alt="Background" width="100%">
+    <div class="carousel-wrapper">
+          <div class="book-item">
+            <img src="What to Read.jpeg" alt="The Magical Language of Others" style="border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;">
+          </div>
+          <div class="book-item">
+            <img src="wisdomOfTea.jpeg" alt="The Wisdom of Tea">
+          </div>
+          <div class="book-item">
+            <img src="howDoYouLive.jpeg" alt="How Do You Live?">
+          </div>
+          <div class="book-item">
+            <img src="liesOurMothers.jpeg" alt="Lies Our Mothers Told US">
+          </div>
+          <div class="book-item">
+            <img src="call me by your name.jpeg" alt="Call me by your name">
+          </div>
+          <div class="book-item">
+            <img src="Harappan.jpeg" alt="A Harappan Adventure">
+          </div>
+          <div class="book-item">
+            <img src="AgainbUTbETTER.jpeg" alt="Again But Better">
+          </div>
+          <div class="book-item">
+            <img src="sapiens.jpeg" alt="Sapiens: A brief History of Humankind">
+          </div>
+          <div class="book-item">
+            <img src="Silence.jpeg" alt="Silence is my Mother Tongue">
+          </div>
+          <div class="book-item">
+            <img src="They Both Die at the End (They Both Die at the End Series Book 1).jpeg" alt="They Both Die at the End">
+          </div>
+          <div class="book-item">
+            <img src="Why I am an Atheist.jpeg" alt="Why I am an Atheist" style="border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;">
+          </div>
+    </div>
+    <p class="carousel-caption">a reader is never alone</p>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Book search...">
+      <button onclick="searchBooks()">Search</button>
+      <!-- <div id="filterDropdown" class="dropdown">
+        <div class="dropdown-option">Option 1</div>
+        <div class="dropdown-option">Option 2</div>
+        <div class="dropdown-option">Option 3</div>
+      </div> -->
+    </div>
+    <p id="filter-selection">Search By:</p>
+    <div class="search-options">
+      <span onclick="selectFilter(this, 'Language')">Language</span>
+    <span onclick="selectFilter(this, 'Genre')">Genre</span>
+    <span onclick="selectFilter(this, 'Author')">Author</span>
+    <span onclick="selectFilter(this, 'Publisher')">Publisher</span>
+    <span onclick="selectFilter(this, 'ISBN')">ISBN</span>
+    <span onclick="selectFilter(this, 'Popularity')">Popularity</span>
+    <span onclick="selectFilter(this, 'Character name')">Character name</span>
+    <span onclick="selectFilter(this, 'Country')">Country</span>
+    </div>
+  </section>
+
+  <!-- Book Categories Section -->
+  <div class="Categories">
+    <!-- Top Trending Section -->
+    <h2>Top Trending</h2>
+    <div class="book-section horizontal-scroll">
+      <div class="book-card">
+        <img src="What to Read.jpeg" alt="The Magical Language of Others">
+        <h3>The Magical Language of Others</h3>
+        <p><strong>By E.J. Koh</strong></p>
+        <p>The Magical Language of Others is a powerful and aching love story in letters, from mother to daughter. This book brings us along Koh's journey in learning about her family history, the familiar struggle most mother-daughter relationships experience, and the role politics and war play on the individual and subsequent generations.</p>
+        <div class="rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="badass.png" alt="The Magical Language of Others">
+        <h3>Likeable Badass</h3>
+        <p><strong>By Alison Fragale</strong></p>
+        <p>Behavioral scientist Alison Fragale offers powerful new insights and a practical playbook for women to advance in any workplace, full of tips, tricks, and strategies to help secure that elusive corner office.</p>
+        <div class="rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Twisted Games (Twisted Book Two) (PDF) - 2_18 MB @ PDF Room.jpeg" alt="The Magical Language of Others">
+        <h3>Twisted Games (Twisted Book Two)</h3>
+        <p><strong>By Ana Huang</strong></p>
+        <p>Bridget and Rhys are constantly faced with decisions about love and duty as their relationship escalates. Although there is an immediate attraction between the two characters, there is also an immediate understanding that a personal relationship between them is impossible.</p>
+        <div class="rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="ikigai.jpeg" alt="The Magical Language of Others">
+        <h3>Ikigai</h3>
+        <p><strong>By Hector Garcia and Francesc Miralles</strong></p>
+        <p>The book is based on interviews with residents of a Japanese village with a high percentage of centenarians. It reveals the secrets to their longevity and happiness, including how they eat, move, work, and foster community. The book also provides practical tools to help readers discover their own ikigai.</p>
+        <div class="rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <!-- Repeat for other books -->
+    </div>
+
+    <div class="Categories">
+      <!-- Top Trending Section -->
+      <h2>Classics</h2>
+      <div class="book-section horizontal-scroll">
+        <div class="book-card">
+          <img src="100YEARS.png" alt="The Magical Language of Others">
+          <h3>One Hundred Years of Solitude</h3>
+          <p><strong>By Gabriel García Márquez</strong></p>
+          <p>One Hundred Years of Solitude is a 1967 novel by Colombian author that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictitious town of Macondo. The novel is often cited as one of the supreme achievements in world literature.</p>
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="Pride.png" alt="The Magical Language of Others">
+          <h3>Pride and Prejudice (The Peacock Edition)</h3>
+          <p><strong>By Jane Austen</strong></p>
+          <p>Since its immediate success in 1813, Pride and Prejudice has remained one of the most popular novels in the English language. Jane Austen called this brilliant work "her own darling child" and its vivacious heroine, Elizabeth Bennet, "as delightful a creature as ever appeared in print."</p>
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="Mockingbird.png" alt="The Magical Language of Others">
+          <h3>To Kill a Mockingbird</h3>
+          <p><strong>By Harper Lee</strong></p>
+          <p>To Kill a Mockingbird has become a classic of modern American literature; a year after its release, it won the Pulitzer Prize. The plot and characters are loosely based on Lee's observations of her family, her neighbors and an event that occurred near her hometown of Monroeville, Alabama, in 1936, when she was ten.</p>
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="ClockworkOrange.png" alt="The Magical Language of Others">
+          <h3>A Clockwork Orange</h3>
+          <p><strong>By Anthony Burgess</strong></p>
+          <p>A Clockwork Orange is a dystopian satirical black comedy novella by English writer Anthony Burgess, published in 1962. Set in a dismal dystopian England, it is the first-person account of a juvenile delinquent who undergoes state-sponsored psychological rehabilitation for his aberrant behaviour.</p>
+          <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+        <!-- Repeat for other books -->
+      </div>
+    
+      <div class="Categories">
+        <!-- Top Trending Section -->
+        <h2>Psychology</h2>
+        <div class="book-section horizontal-scroll">
+          <div class="book-card">
+            <img src="Thinking Fast and Slow.jpg" alt="The Magical Language of Others">
+            <h3>Thinking Fast and Slow</h3>
+            <p><strong>By Daniel Kahneman</strong></p>
+            <p>The book tells us that our mind combines two systems: System 1, the fast-thinking mode, operates effortlessly and instinctively, relying on intuition and past experiences. In contrast, System 2, the slow-thinking mode, engages in deliberate, logical analysis, often requiring more effort.</p>
+            <div class="rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="Braincode.png" alt="The Magical Language of Others">
+            <h3>The Brain Code</h3>
+            <p><strong>By Yossi Chalamish</strong></p>
+            <p>This book introduces the new and fascinating field of Clinical Neuroscience, which argues that the brain has the power to prevent and treat a variety of neurobiological disorders, from autism to attention deficit disorder. With ground-breaking neuroscience research presented in an accessible, easy-to-understand .</p>
+            <div class="rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="oneMoreDay.png" alt="The Magical Language of Others">
+            <h3>One More Day</h3>
+            <p><strong>By Niyc Pidgeon</strong></p>
+            <p>Niyc is determined to positively impact the epidemic of suicide by sharing the life-saving psychological resources that she knows can help bring hope within reach. In. This book offers daily strategies to boost your mental wellbeing, transcend challenges and find more reasons to cherish every day.</p>
+            <div class="rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="why you dream.png" alt="The Magical Language of Others">
+            <h3>This is why you dream</h3>
+            <p><strong>By Rahul Jandial</strong></p>
+            <p>This Is Why You Dream explores the landscape of our subconscious, showing why humans have retained the ability to dream across millennia and how we can now harness its wondrous powers in both our sleeping and waking lives. Dreaming fortifies our ability to regulate emotions.</p>
+            <div class="rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+          </div>
+          <!-- Repeat for other books -->
+        </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <!-- Logo Overlay -->
+    <div class="footer-logo">
+      <img src="FooterLogo.png" alt="Library" width="18%">
+    </div>
+
+    <!-- Footer Content -->
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contributors</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Management</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Social Impact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Partnerships</a></li>
+          <li><a href="#">Influencers</a></li>
+          <li><a href="#">Company Reads</a></li>
+          <li><a href="#">Email Preferences</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Publishing Procedure</a></li>
+          <li><a href="#">Ask a Question</a></li>
+          <li><a href="#">Permissions</a></li>
+          <li><a href="#">For Students</a></li>
+          <li><a href="#">For Educators</a></li>
+          <li><a href="#">Subrights</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Connect with Us</h3>
+        <p>Sign up to stay in touch, learn, and explore more with the books, authors, newsletters, and more from the LIBRARY!</p>
+        <button class="stay-in-touch">Stay in Touch</button>
+        <div class="social-icons">
+          <a href="#"><img src="facebook-circle-line (1).png" alt="Facebook"></a>
+          <a href="#"><img src="twitter-x-line.png" alt="Twitter"></a>
+          <a href="#"><img src="instagram-line.png" alt="Instagram"></a>
+          <a href="#"><img src="linkedin-box-fill.png" alt="LinkedIn"></a>
+          <a href="#"><img src="youtube-line.png" alt="YouTube"></a>
+          <a href="#"><img src="pinterest-line.png" alt="Pinterest"></a>
+          <a href="#"><img src="google-fill.png" alt="Google"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="library.js"></script>
+  </div>
+</body>
+</html>
